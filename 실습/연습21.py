@@ -2,7 +2,7 @@
 #* 문자열이 아닌 숫자로 활용해서 풀어주세요. str() 사용 금지
 a=int(input())
 b=0
-while a>=1:
+while a>0:
     b=b*10
     c=a%10
     b+=c
