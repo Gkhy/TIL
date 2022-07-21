@@ -13,4 +13,4 @@ for t in range(T):
         C=B
     elif A<B:
         C=A
-    print(f'#{t+1} {C}')            
+    print(f'#{t+1} {C}')
