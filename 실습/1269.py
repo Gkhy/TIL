@@ -1,0 +1,5 @@
+a,b=input().split()
+A=set(input().split())
+B=set(input().split())
+answer=len(A-B)+len(B-A)
+print(answer)
