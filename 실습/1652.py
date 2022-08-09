@@ -2,18 +2,32 @@ N=int(input())
 metrix_=[list(input()) for _ in range(N)]
 yeol=0
 hang=0
-if N!=0:
-    for n in range(N):
-        for i in range(N-1):
-            if metrix_[n][i] !='X'and metrix_[n][i+1]!='X':
-                hang+=1
-                break
+
+for n in range(N):
+    cnt=0
     for i in range(N):
-        for n in range(N-1):
-            if metrix_[n][i]!='X' and metrix_[n+1][i]!='X':
+        if metrix_[n][i]=='.':
+            cnt+=1
+        else:
+            if cnt>=2:
+                hang+=1
+            
+            cnt=0
+    if cnt>=2:
+        hang+=1
+    cnt=0           
+
+for i in range(N):
+    cnt=0
+    for n in range(N):
+        if metrix_[n][i]=='.':
+            cnt+=1
+        else:
+            if cnt>=2:
                 yeol+=1
-                break
-else: 
-    hang=0
-    yeol=0            
+            cnt=0
+    if cnt>=2:
+        yeol+=1
+    cnt=0                        
+
 print(hang,yeol)                
