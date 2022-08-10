@@ -1,5 +1,5 @@
 import sys
-line = sys.stdin.read()
+S = sys.stdin.read()
 
 list_=[0]*26
 for i in S:
