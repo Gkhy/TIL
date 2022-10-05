@@ -5,8 +5,6 @@ for _ in range(4):
         for i in range(y1, y2):
             metrix[j][i] = 1
 answer = 0
-for i in range(101):
-    for j in range(101):
-        if metrix[i][j] == 1:
-            answer += 1
+for row in metrix:
+    answer += sum(row)
 print(answer)
